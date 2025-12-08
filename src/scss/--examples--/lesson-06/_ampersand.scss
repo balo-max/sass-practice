@@ -1,0 +1,31 @@
+.link {
+  color: grey;
+
+  &:hover,
+  &:focus {
+    color: black;
+  }
+}
+
+.button {
+  background:{
+    color: blue;
+    position: center;
+    repeat: no-repeat;
+  }
+}
+
+.button-icon {
+  width: 40px;
+  height: 40px;
+
+  &:hover,
+  &:focus {
+    width: 50px;
+    height: 50px;
+  }
+
+  .button:hover & {
+    font-size: 20px;
+  }
+}

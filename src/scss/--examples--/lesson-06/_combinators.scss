@@ -1,0 +1,19 @@
+ul > {
+  li {
+    width: 100px;
+  }
+}
+
+div {
+  + p {
+    color: black;
+  }
+}
+
+h2 {
+  ~ {
+    p {
+      color: black;
+    }
+  }
+}
