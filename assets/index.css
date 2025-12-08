@@ -1,48 +1,33 @@
-.section {
-  color: black;
-}
-.section .title {
-  font-size: 30px;
-  color: black;
-}
-.section .text {
-  font-size: 20px;
-  color: grey;
+.box {
+  width: 570px;
 }
 
-ul > li {
-  width: 100px;
+.box {
+  width: 300px;
 }
 
-div + p {
-  color: black;
+.box {
+  background-color: #ffffff;
 }
 
-h2 ~ p {
-  color: black;
+.box {
+  width: 200px;
 }
 
-.link {
-  color: grey;
-}
-.link:hover, .link:focus {
-  color: black;
-}
-
-.button {
-  background-color: blue;
-  background-position: center;
-  background-repeat: no-repeat;
+.box {
+  width: -webkit-calc(100px * 2);
+  width: -moz-calc(100px * 2);
+  width: calc(100px * 2);
 }
 
-.button-icon {
-  width: 40px;
-  height: 40px;
+.badge-completed {
+  background-color: #a461d8;
 }
-.button-icon:hover, .button-icon:focus {
-  width: 50px;
-  height: 50px;
+
+.badge-ended {
+  background-color: #fc5a5a;
 }
-.button:hover .button-icon {
-  font-size: 20px;
+
+.badge-active {
+  background-color: #82c43c;
 }
