@@ -1,39 +1,48 @@
-body {
-  min-width: 100vw;
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-          align-items: center;
-}
-
-.title {
-  font-size: 16px;
-}
-
-.subtitle {
-  font-size: 10px;
-}
-
-.small-btn {
-  font-size: 16px;
+.section {
   color: black;
-  background-color: hotpink;
+}
+.section .title {
+  font-size: 30px;
+  color: black;
+}
+.section .text {
+  font-size: 20px;
+  color: grey;
 }
 
-body {
-  background-color: white;
+ul > li {
+  width: 100px;
 }
 
-p {
-  color: red;
-  background-color: teal;
+div + p {
+  color: black;
+}
+
+h2 ~ p {
+  color: black;
+}
+
+.link {
+  color: grey;
+}
+.link:hover, .link:focus {
+  color: black;
+}
+
+.button {
+  background-color: blue;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.button-icon {
+  width: 40px;
+  height: 40px;
+}
+.button-icon:hover, .button-icon:focus {
+  width: 50px;
+  height: 50px;
+}
+.button:hover .button-icon {
+  font-size: 20px;
 }
