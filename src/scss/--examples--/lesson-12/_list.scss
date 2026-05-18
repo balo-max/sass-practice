@@ -1,0 +1,45 @@
+@use 'sass:list';
+
+// List examples
+$list: 8, 10, 12, 14, 16;
+
+$list: 1px solid red;
+
+// list.nth() function
+$numbers: 10px, 12px, 14px;
+
+@debug list.nth($numbers, 2);
+@debug list.nth($numbers, -2);
+
+// list.length() function
+$colors: lightgreen, tomato, lightblue;
+
+@debug list.length($colors);
+
+// use list with @each
+$sizes: 10px, 20px, 30px;
+
+@each $size in $sizes {
+  .icon-#{$size} {
+    font-size: $size;
+    width: $size;
+    height: $size;
+  }
+}
+
+// use list with @for
+$button-types: '.btn-sm', '.btn-md', '.btn-lg', '.btn-xl', '.btn-xxl';
+
+@mixin btn-size($types) {
+  @for $i from 1 through list.length($types) {
+    #{list.nth($types, $i)} {
+      $factor: ($i * 5 - 5);
+
+      padding: (5px + $factor) (10px + $factor);
+      border-radius: (10px + $factor);
+    }
+  }
+}
+
+
+@include btn-size($button-types);
