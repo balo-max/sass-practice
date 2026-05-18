@@ -1,19 +1,42 @@
-.title {
+.icon-10px {
+  font-size: 10px;
+  width: 10px;
+  height: 10px;
+}
+
+.icon-20px {
   font-size: 20px;
-  font-weight: 600;
-  line-height: 1.4;
-  letter-spacing: 0.03em;
-  text-align: center;
+  width: 20px;
+  height: 20px;
 }
 
-.subtitle {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  text-align: center;
+.icon-30px {
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
 }
 
-.container {
-  width: 62.5rem;
+.btn-sm {
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.btn-md {
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+
+.btn-lg {
+  padding: 15px 20px;
+  border-radius: 20px;
+}
+
+.btn-xl {
+  padding: 20px 25px;
+  border-radius: 25px;
+}
+
+.btn-xxl {
+  padding: 25px 30px;
+  border-radius: 30px;
 }
