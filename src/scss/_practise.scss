@@ -1,0 +1,19 @@
+@use "utils/_mixins.scss" as m;
+
+.poster {
+  @include m.mq($bp: md, $type: max, $is-retina: true) {
+    background-image: url('..');
+  }
+}
+
+.poster {
+  @include m.mq($bp: md) {
+    background-image: url('..');
+  }
+}
+
+.box {
+  @include m.mq($bp: xl) {
+    display: flex;
+  }
+}

@@ -1,4 +1,6 @@
 @use 'functions' as *;
+@use 'variables' as *;
+@use 'sass:map';
 // Міксин для керування властивостями флекс контейнера
 // Використовується у файлі _flex.scss
 @mixin flex-center($is-column: false) {
@@ -32,7 +34,7 @@
       @media only screen and (min-width: $min-w) {
         font-size: calc(
           #{$min-fs} + #{strip-unit($max-fs - $min-fs)} *
-          ((100vw - #{$min-w}) / #{strip-unit($max-w - $min-w)})
+            ((100vw - #{$min-w}) / #{strip-unit($max-w - $min-w)})
         );
       }
 
@@ -42,5 +44,35 @@
     }
   } @else {
     @error "Incompatible units. Check mixin params";
+  }
+}
+
+// Міксин для адаптивних сторінок
+
+$breakpoints: (
+  'sm': $sm,
+  'md': $md,
+  'lg': $lg,
+  'xl': $xl,
+  'xxl': $xxl,
+) !default;
+
+@mixin mq($bp: sm, $type: min, $is-retina: false) {
+  @if map.has-key($breakpoints, $bp) {
+    $width: map-get($breakpoints, $bp);
+
+    @if $type == max {
+      $width: $width - 0.02px;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @if $is-retina {
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+          @content;
+        }
+      } @else {
+        @content;
+      }
+    }
   }
 }
